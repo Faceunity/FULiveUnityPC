@@ -140,8 +140,9 @@ public class RenderToTexture : MonoBehaviour
         Debug.Log("保存了一张照片:" + name);
     }
 
-    void Awake()
+    void Start()
     {
+        FaceunityWorker.instance.OnInitOK += InitApplication;
         if (itemid_tosdk == null)
         {
             //默认slot槽长度为SLOTLENGTH=10
@@ -156,11 +157,6 @@ public class RenderToTexture : MonoBehaviour
                 slot_items[i].name = "";
             }
         }
-    }
-
-    void Start()
-    {
-        FaceunityWorker.instance.OnInitOK += InitApplication;
     }
 
     void InitApplication(object source, EventArgs e)
