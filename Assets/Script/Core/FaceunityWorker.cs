@@ -574,8 +574,6 @@ public class FaceunityWorker : MonoBehaviour
                     fu_SetFocalLengthScale(FocalLengthScale);   //默认值是1
                     Debug.LogFormat("fu_SetFocalLengthScale({0})", FocalLengthScale);
 
-                    //Debug.LogFormat("fu_SetASYNCTrackFace({0})", fu_SetASYNCTrackFace(0));
-
                     if (OnInitOK != null)
                         OnInitOK(this, null);//触发初始化完成事件
 
@@ -583,6 +581,7 @@ public class FaceunityWorker : MonoBehaviour
                         InitCFaceUnityCoefficientSet();
 
                     //Debug.Log("错误：" + fu_GetSystemError() +","+ Marshal.PtrToStringAnsi(fu_GetSystemErrorString(fu_GetSystemError())));
+                    Debug.Log("SDK Version:" + Marshal.PtrToStringAnsi(fu_GetVersion()));
 
                     yield return StartCoroutine("CallPluginAtEndOfFrames");
                 }

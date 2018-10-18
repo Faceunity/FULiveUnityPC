@@ -278,10 +278,10 @@ public class RenderToTexture : MonoBehaviour
             {
                 Debug.Log("重复载入Item："+ item.name +"  slotid="+ slotid);
             }
-            if (item.type == 1)
+            /*if (item.type == 1)
                 flipmark = false;
             else
-                flipmark = true;
+                flipmark = true;*/
             SetItemMirror(slotid);
 
             if (cb != null)
