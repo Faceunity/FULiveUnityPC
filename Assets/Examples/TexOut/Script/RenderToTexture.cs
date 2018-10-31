@@ -161,7 +161,6 @@ public class RenderToTexture : MonoBehaviour
 
     void InitApplication(object source, EventArgs e)
     {
-        Debug.Log("版本："+ Marshal.PtrToStringAnsi(FaceunityWorker.fu_GetVersion()));
         //StartCoroutine(InitCamera(WebCamTexture.devices[0].name));
     }
 
