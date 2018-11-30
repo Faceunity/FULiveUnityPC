@@ -810,8 +810,6 @@ MonoBehaviour:
   spritelist_0: []
   spritelist_1:
   - {fileID: 21300000, guid: 54d99a41371381945bb6349574ec614a, type: 3}
-  - {fileID: 21300000, guid: bec31c81cef13de41a2a5bf27b283a92, type: 3}
-  - {fileID: 21300000, guid: f83d7ca8a61ca5c4f9e08cad95eb0c6b, type: 3}
   - {fileID: 21300000, guid: 5297823a084ca5e4f9d3fef254a5a301, type: 3}
   - {fileID: 21300000, guid: dce818978cc00f943aa6563b817a0f4b, type: 3}
   - {fileID: 21300000, guid: 39f33036bd1bb0248a46612c048b69fc, type: 3}

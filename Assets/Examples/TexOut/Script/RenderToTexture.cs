@@ -229,7 +229,7 @@ public class RenderToTexture : MonoBehaviour
 
     #region LoadItem
 
-    public delegate void LoadItemCallback(string message);
+    public delegate void LoadItemCallback(Item item);
     public IEnumerator LoadItem(Item item, int slotid = 0, LoadItemCallback cb=null)
     {
         if (LoadingItem == false && item.fullname != null && item.fullname.Length != 0 && slotid >= 0 && slotid < SLOTLENGTH)
@@ -277,14 +277,10 @@ public class RenderToTexture : MonoBehaviour
             {
                 Debug.Log("重复载入Item："+ item.name +"  slotid="+ slotid);
             }
-            /*if (item.type == 1)
-                flipmark = false;
-            else
-                flipmark = true;*/
             SetItemMirror(slotid);
 
             if (cb != null)
-                cb(item.name);//触发载入道具完成事件
+                cb(item);//触发载入道具完成事件
             
             LoadingItem = false;
         }
@@ -412,7 +408,6 @@ public class RenderToTexture : MonoBehaviour
     }
     #endregion
 
-    bool flipmark = true;
     public void SetItemMirror(int slotid)
     {
         if (slotid < 0 || slotid >= SLOTLENGTH)
@@ -422,12 +417,16 @@ public class RenderToTexture : MonoBehaviour
             return;
         FaceunityWorker.fu_ItemSetParamd(itemid, "camera_change", 1.0);
 
-        int param = isMirroed && flipmark ? 1 : 0;
+        int param = isMirroed ? 1 : 0;
 
         //is3DFlipH 参数是用于对3D道具的镜像
         FaceunityWorker.fu_ItemSetParamd(itemid, "is3DFlipH", param);
         //isFlipExpr 参数是用于对人像驱动道具的镜像
         FaceunityWorker.fu_ItemSetParamd(itemid, "isFlipExpr", param);
+        //isFlipTrack 参数是用于对道具的人脸跟踪位置旋转的镜像
+        FaceunityWorker.fu_ItemSetParamd(itemid, "isFlipTrack", param);
+        //isFlipLight 参数是用于对道具内部的灯光的镜像
+        FaceunityWorker.fu_ItemSetParamd(itemid, "isFlipLight", param);
         //loc_y_flip与loc_x_flip 参数是用于对手势识别道具的镜像
         FaceunityWorker.fu_ItemSetParamd(itemid, "loc_y_flip", param);
         FaceunityWorker.fu_ItemSetParamd(itemid, "loc_x_flip", param);

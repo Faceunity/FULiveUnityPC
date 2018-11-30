@@ -845,10 +845,17 @@ public class UIManagerForTexOut : MonoBehaviour
         }
     }
 
-    void OnItemLoaded(string name)
+    void OnItemLoaded(Item item)
     {
-        currentItemName = name;
-        musiccor = StartCoroutine(PlayMusic(name));
+        currentItemName = item.name;
+        if (item.type == 1)    //animoji
+        {
+            rtt.SetItemParamd(item.name, "{\"thing\":\"<global>\",\"param\":\"follow\"}", 1);
+        }
+        else if (item.type == 6)    //MusicFilter
+        {
+            musiccor = StartCoroutine(PlayMusic(item.name));
+        }
     }
 
     void CloseItemUI()

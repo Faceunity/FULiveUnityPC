@@ -27,15 +27,13 @@ public class ItemConfig
 
     //Animoji
     public static Item[] item_1 = {
-        new Item { name = "frog_Animoji", fullname = "items/Animoji/frog_Animoji", iconid = 4 ,type=1,mark=""},
-        new Item { name = "huangya_Animoji", fullname = "items/Animoji/huangya_Animoji", iconid = 7 ,type=1,mark=""},
-        new Item { name = "hetun_Animoji", fullname = "items/Animoji/hetun_Animoji", iconid = 6 ,type=1,mark=""},
-        new Item { name = "buoutuzi_Animoji", fullname = "items/Animoji/buoutuzi_Animoji", iconid = 1 ,type=1,mark=""},
-        new Item { name = "douniuquan_Animoji", fullname = "items/Animoji/douniuquan_Animoji", iconid = 3 ,type=1,mark=""},
-        new Item { name = "hashiqi_Animoji", fullname = "items/Animoji/hashiqi_Animoji", iconid = 5 ,type=1,mark=""},
+        new Item { name = "frog_Animoji", fullname = "items/Animoji/frog_Animoji", iconid = 2 ,type=1,mark=""},
+        new Item { name = "huangya_Animoji", fullname = "items/Animoji/huangya_Animoji", iconid = 5 ,type=1,mark=""},
+        new Item { name = "hetun_Animoji", fullname = "items/Animoji/hetun_Animoji", iconid = 4 ,type=1,mark=""},
+        new Item { name = "douniuquan_Animoji", fullname = "items/Animoji/douniuquan_Animoji", iconid = 1 ,type=1,mark=""},
+        new Item { name = "hashiqi_Animoji", fullname = "items/Animoji/hashiqi_Animoji", iconid = 3 ,type=1,mark=""},
         new Item { name = "baimao_Animoji", fullname = "items/Animoji/baimao_Animoji", iconid = 0 ,type=1,mark=""},
-        new Item { name = "chaiquan_Animoji", fullname = "items/Animoji/chaiquan_Animoji", iconid = 2 ,type=1,mark=""},
-        new Item { name = "kuloutou_Animoji", fullname = "items/Animoji/kuloutou_Animoji", iconid = 8 ,type=1,mark=""},
+        new Item { name = "kuloutou_Animoji", fullname = "items/Animoji/kuloutou_Animoji", iconid = 6 ,type=1,mark=""},
     };
 
     //ItemSticker
